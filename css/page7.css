@@ -1,0 +1,63 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', sans-serif;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(to bottom, #ffe4ec, #fff5f8);
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+}
+
+/* Floating hearts background */
+.hearts::before {
+content: "❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️";
+position: absolute;
+bottom: -50px;
+width: 100%;
+font-size: 24px;
+animation: floatHearts 12s linear infinite;
+opacity: 0.4;
+}
+
+@keyframes floatHearts {
+from {
+transform: translateY(0);
+}
+to {
+transform: translateY(-110vh);
+}
+}
+
+.container {
+background: rgba(255, 255, 255, 0.85);
+padding: 40px;
+border-radius: 20px;
+width: 70%;
+max-width: 700px;
+box-shadow: 0 10px 40px rgba(255, 100, 150, 0.2);
+}
+
+.message {
+font-size: 18px;
+line-height: 1.8;
+color: #444;
+animation: fadeIn 2s ease forwards;
+}
+
+.end-text {
+margin-top: 20px;
+font-size: 20px;
+color: #d63384;
+opacity: 0;
+animation: fadeIn 2s ease forwards;
+animation-delay: 3s;
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}

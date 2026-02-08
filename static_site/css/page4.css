@@ -1,0 +1,110 @@
+body {
+margin: 0;
+padding: 0;
+font-family: 'Segoe UI', sans-serif;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(to bottom, #2c3e50, #000000);
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+color: white;
+}
+
+/* Rain effect */
+.rain {
+position: absolute;
+width: 100%;
+height: 100%;
+background-image: repeating-linear-gradient(
+to bottom,
+rgba(255,255,255,0.1) 0px,
+rgba(255,255,255,0.1) 2px,
+transparent 2px,
+transparent 6px
+);
+animation: rainFall 0.5s linear infinite;
+pointer-events: none;
+}
+
+@keyframes rainFall {
+from {
+background-position: 0 0;
+}
+to {
+background-position: 0 20px;
+}
+}
+
+/* Hope ray */
+.sun-ray {
+position: absolute;
+top: -100px;
+right: -100px;
+width: 400px;
+height: 400px;
+background: radial-gradient(circle, rgba(255, 220, 150, 0.5), transparent 70%);
+animation: rayGlow 5s ease-in-out infinite alternate;
+pointer-events: none;
+}
+
+@keyframes rayGlow {
+from {
+opacity: 0.4;
+transform: scale(1);
+}
+to {
+opacity: 0.8;
+transform: scale(1.2);
+}
+}
+
+.scene {
+width: 70%;
+max-width: 800px;
+text-align: center;
+padding: 40px;
+border-radius: 20px;
+background: rgba(0, 0, 0, 0.5);
+backdrop-filter: blur(6px);
+box-shadow: 0 0 40px rgba(255,255,255,0.1);
+position: relative;
+z-index: 1;
+}
+
+.message {
+font-size: 18px;
+line-height: 1.8;
+opacity: 0;
+animation: fadeIn 3s ease forwards;
+}
+
+.next-container {
+margin-top: 25px;
+opacity: 0;
+animation: fadeIn 2s ease forwards;
+animation-delay: 4s;
+}
+
+.next-btn {
+padding: 12px 30px;
+font-size: 18px;
+background-color: #ff4d88;
+color: white;
+border: none;
+border-radius: 30px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.next-btn:hover {
+background-color: #e6005c;
+transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+to {
+opacity: 1;
+}
+}

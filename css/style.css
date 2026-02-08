@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+
+  /* Soft pink gradient background */
+  background: linear-gradient(to bottom right, #ffd6e8, #ffeef5);
+
+  /* Rose background image (optional but beautiful) */
+  background-image: url("https://images.unsplash.com/photo-1518895949257-7621c3c786d7");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 60%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  color: #d63384;
+  margin-bottom: 20px;
+}
+
+.message {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.start-btn {
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: #ff4d88;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #e6005c;
+  transform: scale(1.05);
+}
